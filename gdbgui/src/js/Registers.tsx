@@ -31,14 +31,6 @@ class Registers extends React.Component<{}, State> {
   }
   static get_update_cmds() {
     let cmds: any = [];
-    if (
-      [constants.inferior_states.paused, constants.inferior_states.running].indexOf(
-        // @ts-expect-error ts-migrate(2345) FIXME: Argument of type 'boolean' is not assignable to pa... Remove this comment to see the full error message
-        store.get("inferior_program") > -1
-      )
-    ) {
-      return cmds;
-    }
     if (store.get("can_fetch_register_values") === true) {
       if (store.get("register_names").length === 0) {
         if (register_name_fetch_count <= MAX_REGISTER_NAME_FETCH_COUNT) {

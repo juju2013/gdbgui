@@ -214,15 +214,15 @@ class RightSidebar extends React.Component {
         />
 
         {/* @ts-expect-error ts-migrate(2322) FIXME: Property 'title' does not exist on type 'Intrinsic... Remove this comment to see the full error message */}
-        <Collapser title="threads" content={<Threads />} />
+        <Collapser title="threads"  collapsed={true} content={<Threads />} />
 
         {/* @ts-expect-error ts-migrate(2322) FIXME: Property 'title' does not exist on type 'Intrinsic... Remove this comment to see the full error message */}
-        <Collapser id="locals" title="local variables" content={<Locals />} />
+        <Collapser id="locals"  collapsed={true} title="local variables" content={<Locals />} />
         {/* @ts-expect-error ts-migrate(2322) FIXME: Property 'title' does not exist on type 'Intrinsic... Remove this comment to see the full error message */}
-        <Collapser id="expressions" title="expressions" content={<Expressions />} />
+        <Collapser id="expressions"  collapsed={true} title="expressions" content={<Expressions />} />
         <Collapser
           // @ts-expect-error ts-migrate(2322) FIXME: Property 'title' does not exist on type 'Intrinsic... Remove this comment to see the full error message
-          title="Tree"
+          title="Tree"  collapsed={true}
           content={
             <div>
               <input
@@ -247,12 +247,12 @@ class RightSidebar extends React.Component {
         <Collapser title="breakpoints" content={<Breakpoints />} />
         <Collapser
           // @ts-expect-error ts-migrate(2322) FIXME: Property 'title' does not exist on type 'Intrinsic... Remove this comment to see the full error message
-          title="signals"
+          title="signals" collapsed={true} 
           // @ts-expect-error ts-migrate(2322) FIXME: Property 'signals' does not exist on type 'Intrins... Remove this comment to see the full error message
           content={<InferiorProgramInfo signals={this.props.signals} />}
         />
         {/* @ts-expect-error ts-migrate(2322) FIXME: Property 'title' does not exist on type 'Intrinsic... Remove this comment to see the full error message */}
-        <Collapser title="registers" collapsed={true} content={<Registers />} />
+        <Collapser title="registers" collapsed={false} content={<Registers />} />
 
         {mi_output}
       </div>
